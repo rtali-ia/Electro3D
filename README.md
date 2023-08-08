@@ -13,6 +13,8 @@ Instructions:
    d. cmake .. -DCMAKE_BUILD_TYPE=Release -Dtalyfem_DIR=/anvil/scratch/x-rtali/packages/taly_fem/build -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpicxx \
    
    e. make -j8 
+   
+2. Generate Mesh - go to the mesh folder and run the shell file.
 
 3. In config.txt make sure the location of msh file is set to ./mesh/Ellipsoid3D.msh 
 
