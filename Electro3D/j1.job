@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#SBATCH -A cts110007  # Allocation name
+#SBATCH --nodes=1        # Total # of nodes 
+#SBATCH --ntasks=128     # Total # of MPI tasks
+#SBATCH --time=12:00:00   # Total run time limit (hh:mm:ss)
+#SBATCH -J job1     # Job name
+#SBATCH -o "j1.out"     # Name of stdout output file
+#SBATCH -e "e1.out"     # Name of stderr error file
+#SBATCH -p wholenode     # Queue (partition) name
+#SBATCH --mail-user=rtali@iastate.edu
+#SBATCH--mail-type=all   # Send email to above address at begin and end of job
+
+module purge
+module load intel
+module load openmpi
+
+PROJ_DIR="/anvil/projects/x-cts110007/rtali/projects/Electro3D/1"
+EXECUTABLE="../EllipsoidHole3D/build-anvil/capacitance3d"
+
+cd ${PROJ_DIR}
+mpirun -n 64 ${EXECUTABLE}
+
