@@ -1,0 +1,15 @@
+nsd = 3
+basisFunction = "linear"
+ifBoxGrid = False
+inputFilenameGrid = "FinalHex.msh"
+ifLoadNodeIndicators = True
+ifDD = True
+
+kappa = 0.01
+delta = 0.1
+voltage = 1
+xCenter = 0.0
+yCenter = 0.0
+R = 0.2
+voltPlate = 1
+groundedPlate = 2
